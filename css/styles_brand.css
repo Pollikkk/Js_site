@@ -1,0 +1,133 @@
+.two{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.backgr, .backgr_2{
+    position:relative;
+    overflow: hidden;
+    height: 200px; 
+    width: 200px; 
+    margin: 0 auto;
+    /*margin: 100px auto;*/
+}
+
+
+
+.click{
+    position: absolute;
+    left: -200px;
+    /*animation: move 5s linear;*/
+}
+
+.name{
+    position: absolute;
+    bottom: 10px;
+}
+
+
+.brand{
+    position: absolute;
+    /*z-index: 1;*/
+}
+
+
+
+
+.let{
+    fill:rgb(124, 0, 135);
+    stroke:rgb(0, 0, 0);
+    stroke-width:2;
+}
+
+a:focus .let{
+    fill:#53ea93;
+    /*transition: .35s fill;*/
+}
+
+
+
+.motion-obj{    /*шарик двигающийся*/
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(240, 63, 152);
+    border-radius: 50%;
+    z-index: 2;
+    /*top: 110px;
+    left: 70px;*/
+    opacity: 0;
+    
+    offset-path: path('M 60 150 L 60 80 L 110 80 L 110 90 L 70 90 L 70 100 C 130 100, 130 150, 60 150');
+    animation: move 5s linear infinite;
+}
+
+.backgr:hover .motion-obj, .backgr_2:hover .motion-obj{
+    transition: opacity 0.2s ease;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/*img:hover{
+    left:0px;
+}*/
+
+/*a:focus .photo{
+    animation: move 5s linear;
+}*/
+
+/*svg:hover .let{
+    fill:#53ea93;
+    transition: .35s fill;
+}*/
+
+@keyframes move {   
+    0% { 
+        offset-distance: 0%;
+      }
+    100%{
+        offset-distance: 100%;
+    }
+}
+
+
+.hide{
+    left: -200px;
+    animation: disappear 1s;
+}
+
+.show{
+    left: 0px;
+    animation: appear 1s;
+}
+
+@keyframes click{
+    50%{
+        from{left: -200px;}
+        to{left: 0px;}
+    }
+    100%{
+        from{left: 0px;}
+        to{left: -200px;}
+    }
+}
+
+@keyframes disappear{
+    from{left: 0px;}
+    to{left: -200px;}
+}
+
+@keyframes appear{
+    from{left: -200px;}
+    to{left: 0px;}
+}
+
+
+/*.brand::before {
+    content: "";
+    background-image: url("pikachu.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.3;
+}*/

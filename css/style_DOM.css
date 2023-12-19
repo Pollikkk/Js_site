@@ -1,0 +1,99 @@
+.test{
+    position: relative;
+    background-color: rgb(255, 39, 32);
+    height:800px;
+    width:100%;
+    /*padding-left: 59px;*/
+}
+
+#But{
+    color:rgb(50, 50, 50);
+    background-color: chocolate;
+    padding: 10px;
+}
+
+h2{
+    text-align: center;
+}
+
+#field{
+    display: flex;
+    width: 100%;
+}
+
+.stolbiki{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    max-width: 200px;
+}
+
+.ansv{
+    display: relative;
+    flex-direction: column;
+    position: relative;
+}
+
+.main_box{
+    padding: 10px 10px; /* расстояние от текста до края кнопки */
+    margin: 10px;
+    background-color: blanchedalmond;
+    max-width: 150px;
+    
+}
+
+.main_box_right{
+    padding: 10px 10px; /* расстояние от текста до края кнопки */
+    margin: 10px 10px;
+    background-color: rgb(173, 243, 82);
+    max-width: 150px;
+    border: 3px solid green;
+}
+
+.main_box_wrong{
+    padding: 10px 10px; /* расстояние от текста до края кнопки */
+    margin: 10px 10px;
+    background-color: rgb(243, 192, 82);
+    max-width: 150px;
+    border: 3px solid rgb(244, 4, 4);
+}
+
+.box{
+    position: absolute;
+    padding: 20px 20px; /* расстояние от текста до края кнопки */
+    margin: 10px 10px;
+    background-color: blanchedalmond;
+    max-width: 150px;
+    border: none;
+    cursor: pointer;
+}
+
+.click_box{
+    position: absolute;
+    padding: 20px 20px; /* расстояние от текста до края кнопки */
+    margin: 10px 10px;
+    background-color: blanchedalmond;
+    max-width: 150px;
+    border: 3px solid yellow;
+}
+
+.box_right{
+    z-index: 10;
+    position: absolute;
+    padding: 20px 20px; /* расстояние от текста до края кнопки */
+    margin: 10px 10px;
+    background-color: blanchedalmond;
+    max-width: 150px;
+    border: 3px solid yellow;
+    font-size: 40%;
+    transition: 1s;
+    transform: scale(2);
+}
+
+.box_right:disabled{
+    color: rgb(50, 50, 50);
+}
+
+.box:hover{
+    background-color: rgb(255, 249, 240);
+}

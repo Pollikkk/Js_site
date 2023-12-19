@@ -1,0 +1,151 @@
+/*Фон*/
+.figure {
+    height: 200px; 
+    width: 200px; 
+    margin: 100px auto;
+    background: linear-gradient(to right, #faf8c8,#C8EBFA);
+    position: relative;
+    overflow: hidden;   /*обрезка содержимого, выходящего за рамки фона*/
+    /*transform: scale(0.5);*/
+    }
+   
+/*Солнце*/
+    .sun {
+        width: 28px;
+        height: 28px;
+        background: #eafe68;
+       /* border-radius: 50%;*/
+        position: absolute;
+        /*left: -10px;
+        top: -10px;*/
+    }
+    
+    .sun:after {
+        content: "";
+        width: 40px;
+        height: 20px;
+        background-color: #eafe68;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        position: absolute;
+        top: 11px;
+        left: 1.5px;
+        transform: rotate(135deg);
+      }
+
+ /*Волны*/
+.w1, .w2, .w3, .w4{
+    width: 80px; 
+    height: 80px;
+    background: radial-gradient(at right, #63b4ff, #003464);
+   /* background: radial-gradient(#63b4ff, #003464);*/
+    border-radius: 50%;
+    position: absolute;
+    
+}
+
+.w1{
+    z-index: 1;
+    left: -20px;
+    bottom: -20px;
+}
+.w2{
+    z-index: 2;
+    left: 40px;
+    bottom: -10px;
+}
+.w3{
+    z-index: 3;
+    left: 80px;
+    bottom: -25px;
+}
+.w4{
+    z-index: 4;
+    left: 130px;
+    bottom: -20px;
+}
+
+/*Судно*/
+.body{
+    height: 0;
+    width: 50px;
+    border-top: 50px solid #d3532f;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+}
+
+.stick{
+    width: 7px;
+    height: 80px;
+    background: #9c4128;
+    position: absolute;
+    bottom: 70px;
+    left: 100px;
+}
+
+.flag{
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid #ed0640;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    transform: rotate(90deg);
+}
+
+.parus{
+    width: 0;
+    height: 0;
+    border-bottom: 40px solid #88e5fe;
+    border-left: 32px solid transparent;
+    border-right: 32px solid transparent;
+    position: absolute;
+    top: 70px;
+    left: 94px;
+    transform: rotate(90deg);
+}
+
+
+/*Арки*/
+.ar1, .ar2, .ar3 {  /*левые столбцы арок*/
+    width: 7px;
+    height: 100px;
+    background: #b1b3a7;
+    position: absolute;
+    bottom: 30px;
+}
+
+.ar1:after, .ar2:after, .ar3:after {    /*правые столбцы арок*/
+    content: "";
+    width: 7px;
+    height: 100px;
+    background: #b1b3a7;
+    position: absolute;
+    left: 63px;
+}
+
+.ar2{   /*размещаем пару столбцов 2-й и 3-й арки*/
+    left: 65px;
+}
+
+.ar3{
+    left: 130px;
+}
+
+.ar1:before, .ar2:before, .ar3:before{  /*полукружья арок*/
+    content: "";
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    box-shadow: 7px 7px 0 0 #b1b3a7;
+    position: absolute;
+    top: -20px;
+    left: 1.5px;
+    transform: rotate(225deg);
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Мой сайт</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/styles_brand.css">
+	</head>
+    
+	<body>
+        <div class="header">
+            <div class="wrapper">
+                <div class="navigation">
+
+                    <div class="pokeball">
+                        <div class="upper"></div>
+                        <div class="lower"></div>
+                        <div class="center_1"></div>
+                        <div class="center_2"></div>
+                    </div>
+
+                    <ul class="nav">
+                        <li><a href="index.html">Create</a></li>
+                        <li><a href="№1.html">#1. Рисунок</a></li>
+                        <li><a class="active_2" href="№2.html">#2. Flex-box</a></li>
+                        <li><a href="№3.html">#3. DOM-тест</a></li>
+                        <li><a href="№4.html">#4. Слова</a></li>
+                        <li><a href="№5.html">#5. Курсовая</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="banner">
+            <div class="wrapper">
+                <h1 class="title">Задание 2</h1>
+                <p class="desr">Flex-box бренд.</p>
+                    
+
+                <div class="backgr">
+                    <div class="click">
+                        <img class="photo" src="image/pikachu.png" height=200 width=200 alt="#">
+                        <div class="name"> Бордюг Полина </div>
+                    </div>
+        
+                    <div class="motion-obj"></div>
+        
+                    <svg class = "brand" width="200" height="200">
+                        <a class="tap" xlink:href="#0">
+                            <path class = "let" id = "name" d="M100 110 L 100 40 L 150 40 L 150 110 L 140 110 L 140 50 L 110 50 L 110 110 L 100 110" />
+                            <path class = "let" id = "surname" d="M70 140 C 110 140, 110 110, 70 110 L 70 140 M 60 150 L 60 80 L 110 80 L 110 90 L 70 90 L 70 100 C 130 100, 130 150, 60 150" />
+                        </a>
+                        Sorry, your browser does not support inline SVG.
+                    </svg> 
+                </div>
+        
+                
+        
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="wrapper">
+                <p>©️ 2023 Graphic Resourses. All rights reserved.</p>
+            </div>
+        </div>
+
+        <script>
+            pic = document.querySelector('.click');
+            
+            click_let = document.querySelector('.tap');
+            
+            click_let.onclick = function(){
+    
+                /*pic.classList.remove('show');
+                pic.classList.add('show');*/
+                if (pic.classList.contains('hide'))
+                {
+                    pic.classList.remove('hide');
+                    pic.classList.add('show');
+                }
+                else{
+                    pic.classList.add('hide');
+                    pic.classList.remove('show');
+                }
+            }
+        </script>
+        
+    </body>
+</html>
